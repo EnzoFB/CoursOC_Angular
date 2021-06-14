@@ -27,6 +27,5 @@ export class AppareilComponent implements OnInit {
     } else {
       return 'red';
     }
-}
-
+  }
 }

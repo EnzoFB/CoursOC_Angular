@@ -9,6 +9,12 @@ export class AppComponent {
   isAuth = false;
   title = 'Projet Angular';
 
+  lastUpdate: Promise<Date> = new Promise( (resolve, reject) => {
+      const date = new Date();
+      setTimeout( () => { resolve(date); }, 2000);
+    }
+  );
+
   /*
   appareilOne = "Machine à laver";
   appareilTwo = "Frigo";
