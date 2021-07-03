@@ -1,0 +1,9 @@
+<li *ngIf="post != null" [ngClass]="{'list-group-item': true,
+                                     'text-dark': true,
+                                     'list-group-item-success': post.loveIts > post.hateIts,
+                                     'list-group-item-danger': post.hateIts > post.loveIts}">
+    <h2>{{ post.title }} <span style="position: absolute; right: 20px;">Date: {{ post.createdAt | date:'short' }}</span></h2>
+    <p>{{ post.content }}</p>
+    <button class="btn btn-success" (click)="onLove()">LOVE</button> &nbsp;{{ post.loveIts }}
+    <button class="btn btn-danger" (click)="onHate()">HATE</button> &nbsp;{{ post.hateIts }}
+</li>
